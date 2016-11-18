@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+	<tlib-version>1.0</tlib-version>
+	<short-name>x</short-name>
+
+
+	<!-- ========================= infrastructure ========================= -->
+
+	<tag>
+		<name>block</name>
+		<tag-class>com.sogou.ms.util.infrastructure.web.BlockDefinitionTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<tag>
+		<name>content</name>
+		<tag-class>com.sogou.ms.util.infrastructure.web.BlockContentTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>append</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>html</name>
+		<tag-class>com.sogou.ms.util.infrastructure.web.KeepHtmlTag</tag-class>
+		<body-content>JSP</body-content>
+	</tag>
+
+
+	<tag>
+		<name>resource</name>
+		<tag-class>com.sogou.ms.util.infrastructure.web.JsAndCssTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>src</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+
+
+	<!-- ========================= fragments ========================= -->
+
+	<tag>
+		<name>a</name>
+		<tag-class>com.sogou.ms.util.infrastructure.web.ATag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<name>href</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>stopOnPath</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>stopOnParam</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>stopOnAttribute</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+
+	<!-- ========================= url utils ========================= -->
+
+	<function>
+		<name>removeParam</name>
+		<function-class>com.sogou.ms.util.infrastructure.web.el.UrlUtil</function-class>
+		<function-signature>java.lang.String removeParam(java.lang.String,java.lang.String)</function-signature>
+	</function>
+	<function>
+		<name>overrideParam</name>
+		<function-class>com.sogou.ms.util.infrastructure.web.el.UrlUtil</function-class>
+		<function-signature>java.lang.String overrideParam(java.lang.String,java.lang.String,java.lang.String)
+		</function-signature>
+	</function>
+	<function>
+		<name>overrideParam2</name>
+		<function-class>com.sogou.ms.util.infrastructure.web.el.UrlUtil</function-class>
+		<function-signature>java.lang.String overrideParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+		</function-signature>
+	</function>
+	<function>
+		<name>overrideParam3</name>
+		<function-class>com.sogou.ms.util.infrastructure.web.el.UrlUtil</function-class>
+		<function-signature>java.lang.String overrideParam(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+		</function-signature>
+	</function>
+    <function>
+        <name>enc</name>
+        <function-class>com.sogou.ms.util._</function-class>
+        <function-signature> java.lang.String urlenc(java.lang.String)</function-signature>
+    </function>
+    <function>
+        <name>tm</name>
+        <function-class>com.sogou.ms.util._</function-class>
+        <function-signature>java.lang.String tm()</function-signature>
+    </function>
+    <function>
+        <name>updPageTime</name>
+        <function-class>web.util.DateUtil</function-class>
+        <function-signature>java.lang.String updPageTime(java.util.Date)</function-signature>
+    </function>	
+    <function>
+	<name>fs</name>
+	<function-class>web.util.ElUtil</function-class>
+	<function-signature>java.lang.String fs(java.lang.String,int)</function-signature>
+    </function>
+	<function>
+		<name>contains</name>
+		<function-class>web.util.ElUtil</function-class>
+		<function-signature>boolean contains(java.lang.String,java.lang.String)</function-signature>
+	</function>
+
+	<function>
+		<name>escapeHtml</name>
+		<function-class>web.util.ElUtil</function-class>
+		<function-signature>java.lang.String escapeHtml(java.lang.String)</function-signature>
+	</function>
+
+</taglib>
