@@ -13,7 +13,6 @@ public class GlobalParams {
 
 	public static final GlobalParams of( HttpServletRequest request){
 		GlobalParams globalParams = new GlobalParams();
-		globalParams.GPS.add( StatParam.of(request) );
         globalParams.GPS.add( UsidParam.of(request) );
         globalParams.GPS.add( SgidParam.of(request) );
 		return globalParams;
