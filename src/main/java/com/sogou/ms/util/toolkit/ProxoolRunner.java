@@ -4,7 +4,7 @@ import org.apache.commons.dbutils.DbUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.AbstractListHandler;
-import org.logicalcobwebs.proxool.ProxoolFacade;
+//import org.logicalcobwebs.proxool.ProxoolFacade;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +52,7 @@ public class ProxoolRunner extends QueryRunner {
 
 			String jdbcUri = "proxool.%s:%s:jdbc:mysql://%s?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8";
 			String url = f(jdbcUri, alias, driverClass, driverUrl);
-			ProxoolFacade.registerConnectionPool(url, info);
+//			ProxoolFacade.registerConnectionPool(url, info);
 		} catch (Exception e) {
 			logger.error("init db " + alias + " fail.", e);
 		}

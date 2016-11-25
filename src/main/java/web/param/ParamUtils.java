@@ -89,9 +89,8 @@ public class ParamUtils {
     }
 
     public static String getGf(HttpServletRequest request) {
-        StatParam statParam = StatParam.of(request);
-        if (statParam != null)
-            return _.trimToEmpty(statParam.value());
+//        if (statParam != null)
+//            return _.trimToEmpty(statParam.value());
         return "";
     }
 }
